@@ -16,3 +16,6 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+gulpfile.js
+.DS_Store
+node_modules
