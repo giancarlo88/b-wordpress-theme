@@ -1,4 +1,7 @@
 .slide {
-  height: 300px !important; 
-  background: linear-gradient(35deg, blue, green)
+  background: linear-gradient(35deg, blue, green);
+  height: 300px;
+  @media (min-width: 37.5em) {
+  height: 500px !important; 
+  }
 }

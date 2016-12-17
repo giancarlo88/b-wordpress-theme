@@ -50,8 +50,9 @@
 	}
 
 	li {
-		float: left;
 		position: relative;
+    font-family: $font__headings;
+    font-size: 1.5em;
 
 		&:hover > a,
 		&.focus > a {
@@ -81,7 +82,8 @@
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
+    justify-content: space-around;
 	}
 }
 
@@ -104,4 +106,12 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.banner {
+  background-image: url(media/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
 }

@@ -236,6 +236,9 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: Sahitya, Georgia, Serif; }
 
+h2 {
+  text-align: center; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -335,6 +338,17 @@ figure {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+.fukol-grid {
+  display: flex;
+  flex-wrap: wrap; }
+
+.fukol-grid > * {
+  flex: 1 0 2.5em;
+  margin: 0.5em; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -463,8 +477,9 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    float: left;
-    position: relative; }
+    position: relative;
+    font-family: Sahitya, Georgia, Serif;
+    font-size: 1.5em; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -478,7 +493,8 @@ a {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: flex;
+    justify-content: space-around; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -498,6 +514,13 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.banner {
+  background-image: url(media/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -627,8 +650,16 @@ a {
   display: block; }
 
 .slide {
-  height: 300px !important;
-  background: linear-gradient(35deg, blue, green); }
+  background: linear-gradient(35deg, blue, green);
+  height: 300px; }
+  @media (min-width: 37.5em) {
+    .slide {
+      height: 500px !important; } }
+
+.site-footer {
+  background-color: #35383A;
+  color: #ccc;
+  min-height: 100px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
