@@ -1,5 +1,21 @@
 .site-footer{
+  text-align: center;
   background-color: $color__footer;
   color: $color__background-hr;
   min-height: 100px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  a.fa { 
+    font-size: 30px;
+    margin: 10px; 
+    color: white;
+    text-decoration: none;
+    transition: all .5s ease;
+    &:hover {
+      color: $color__link-hover
+    }
+}
 }

@@ -2,7 +2,7 @@
 /**
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
- *
+ * Template Name: Home
  * @package Bisi\'s_Wordpress_Theme
  */
 
@@ -16,15 +16,15 @@ get_header(); ?>
     'post_type'      => 'attachment',
     'post_mime_type' => 'image',
     'post_status'    => 'inherit',
-    'posts_per_page' => - 1,
+    'posts_per_page' =>  10,
   );
   
   $query_images = new WP_Query( $query_images_args );
 
   $images = array();
   foreach ( $query_images->posts as $image ) {
-    echo('<div class="slide" style="background-image: url('. wp_get_attachment_url( $image->ID ).')"></div>');
-  };
+      echo('<div class="slide" style="background-image: url('. wp_get_attachment_url( $image->ID ).')"></div>');
+  }
   ?>   
     </div>
 
@@ -37,7 +37,7 @@ get_header(); ?>
                <div class="article-preview">
               <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
                     <div class="entry">
-                      <?php the_content(); ?>
+                      <?php the_excerpt(); ?>
                     </div>
   	                </div> <!-- closes the first div box -->
               <?php $counter1 ++ ?>
@@ -54,7 +54,7 @@ get_header(); ?>
                     </div>
   	                </div> <!-- closes the first div box -->
              <?php $counter2 ++; endwhile; ?>
-            </div>
+          </div>
       <div class = "interview-of-the-month">
         <h2>Interview of the Month</h2>
         <?php $query3 = new WP_Query( array('tag' => 'interview-of-the-month'), array('category' => 'interview'), array('posts_per_page' => 1))  ?>
@@ -63,13 +63,12 @@ get_header(); ?>
                <div class="article-preview">
               <h3><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
                     <div class="entry">
-                      <?php the_content(); ?>
+                      <?php the_excerpt(); ?>
                     </div>
   	                </div> <!-- closes the first div box -->
               <?php $counter3 ++ ?>
              <?php endwhile;?>
             </div>
-          </div>
       </div>
 
     <div class = "fukol-grid lower-content">
@@ -79,6 +78,15 @@ get_header(); ?>
       </div>
       <div class = "upcoming-engagements">
         <h2>Upcoming Engagements</h2>
+      </div>
+    </div>
+
+    <div class = "fukol-grid media-links">
+      <div class = "media-logos">
+        <div class = "media-hover-links fukol-grid">
+          <a href="/print">Print</a>
+          <a href="/television">Television</a>
+        </div>
       </div>
     </div>
 		<?php

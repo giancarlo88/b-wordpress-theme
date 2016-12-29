@@ -435,7 +435,8 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: royalblue;
+  transition: all .5s ease; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -650,16 +651,52 @@ a {
   display: block; }
 
 .slide {
-  background: linear-gradient(35deg, blue, green);
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 300px; }
   @media (min-width: 37.5em) {
     .slide {
       height: 500px !important; } }
 
+.media-logos {
+  margin: 0; }
+
+.media-links {
+  background-image: url(media/logos.png);
+  width: 100%;
+  height: 500px; }
+  .media-links .media-hover-links {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all .5s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+    .media-links .media-hover-links a {
+      font-family: Sahitya, Georgia, Serif;
+      font-size: 26px; }
+  .media-links:hover .media-hover-links {
+    opacity: 1; }
+
 .site-footer {
+  text-align: center;
   background-color: #35383A;
   color: #ccc;
   min-height: 100px; }
+
+.social-media {
+  display: flex;
+  justify-content: center; }
+  .social-media a.fa {
+    font-size: 30px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all .5s ease; }
+    .social-media a.fa:hover {
+      color: midnightblue; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
