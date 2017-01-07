@@ -19,8 +19,10 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
-}
+  @media screen and (min-width: 37.5em) {
+      width: 66%
+    }
+  }
 
 .page-links {
 	clear: both;

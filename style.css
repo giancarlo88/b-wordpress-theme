@@ -290,8 +290,11 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
+article {
+  padding: 10px; }
+
 body {
-  background: #fff;
+  background: linear-gradient(180deg, #ccc, #eee);
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
@@ -435,12 +438,12 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #111;
   transition: all .5s ease; }
   a:visited {
-    color: purple; }
+    color: #111; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #666; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -453,7 +456,11 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  background-color: #f80200;
+  box-shadow: 1px 3px 5px 2px grey;
+  z-index: 60;
+  position: relative; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -463,7 +470,7 @@ a {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 1.5em;
+      top: 2.5em;
       left: -999em;
       z-index: 99999; }
       .main-navigation ul ul ul {
@@ -473,7 +480,12 @@ a {
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
-        width: 200px; }
+        width: 200px;
+        text-transform: lowercase; }
+      .main-navigation ul ul :hover > a,
+      .main-navigation ul ul .focus > a {
+        color: #666;
+        transition: all .5s ease; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
@@ -483,7 +495,13 @@ a {
     font-size: 1.5em; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: lowercase; }
+
+.sub-menu {
+  flex-direction: column;
+  background-color: #f80200;
+  font-size: 14px; }
 
 /* Small menu. */
 .menu-toggle,
@@ -534,7 +552,7 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #C2C8D1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
@@ -632,10 +650,11 @@ a {
 .group-blog .byline {
   display: inline; }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0; }
+@media screen and (min-width: 37.5em) {
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    width: 66%; } }
 
 .page-links {
   clear: both;
@@ -663,8 +682,9 @@ a {
 
 .media-links {
   background-image: url(media/logos.png);
+  background-size: cover;
   width: 100%;
-  height: 500px; }
+  height: 600px; }
   .media-links .media-hover-links {
     opacity: 0;
     background-color: rgba(255, 255, 255, 0.8);
@@ -684,7 +704,10 @@ a {
   text-align: center;
   background-color: #35383A;
   color: #ccc;
-  min-height: 100px; }
+  min-height: 100px;
+  box-shadow: 0px 11px 13px 14px #35383A;
+  z-index: 10;
+  position: relative; }
 
 .social-media {
   display: flex;
@@ -696,7 +719,10 @@ a {
     text-decoration: none;
     transition: all .5s ease; }
     .social-media a.fa:hover {
-      color: midnightblue; }
+      color: #666; }
+
+.site-info {
+  font-size: 10px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

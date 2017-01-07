@@ -25,9 +25,7 @@
     </div>
 
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bisis-wordpress-theme' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'bisis-wordpress-theme' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'bisis-wordpress-theme' ), 'bisis-wordpress-theme', '<a href="http://www.ggalliani.com" rel="designer">Giancarlo Galliani</a>' ); ?>
+			<?php printf( esc_html__( 'Theme written by %2$s.', 'bisis-wordpress-theme' ), 'bisis-wordpress-theme', '<a href="http://www.ggalliani.com" rel="designer">Giancarlo Galliani</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

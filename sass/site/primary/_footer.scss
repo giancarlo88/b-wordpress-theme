@@ -3,6 +3,10 @@
   background-color: $color__footer;
   color: $color__background-hr;
   min-height: 100px;
+  box-shadow: 0px 11px 13px 14px $color__footer;
+  z-index: 10;
+  position: relative;
+
 }
 
 .social-media {
@@ -18,4 +22,8 @@
       color: $color__link-hover
     }
 }
+}
+
+.site-info {
+  font-size: 10px;
 }
