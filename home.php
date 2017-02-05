@@ -12,6 +12,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
   <div class = "carousel">
   <?php 
+    // Pull images from the media libary with the "slideshow" category for use in carousel.
     $query_images_args = array(
     'post_type'      => 'attachment',
     'post_mime_type' => 'image',
@@ -23,8 +24,8 @@ get_header(); ?>
             'field'    => 'slug',
             'terms'    => 'slideshow',
         )
-    )
-  );
+      )
+    );
   
   $query_images = new WP_Query( $query_images_args );
 
@@ -85,6 +86,17 @@ get_header(); ?>
       </div>
       <div class = "upcoming-engagements">
         <h2>Upcoming Engagements</h2>
+          <?php $query4 = new WP_Query( array('category' => 'upcoming-engagements'), array('posts_per_page' => 1))  ?>
+            <?php $counter4 = 0?>
+            <?php while ( $query4 -> have_posts() && $counter4 < 1 ) : $query4 -> the_post();  ?>
+               <div class="article-preview">
+                    <div class="entry">
+                      <?php the_content(); ?>
+                    </div>
+  	                </div> <!-- closes the first div box -->
+              <?php $counter4 ++ ?>
+             <?php endwhile;?>
+
       </div>
     </div>
 
