@@ -484,8 +484,7 @@ a {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px;
-        text-transform: lowercase;
-        margin: 5px 10px; }
+        text-transform: lowercase; }
       .main-navigation ul ul :hover > a,
       .main-navigation ul ul .focus > a {
         color: #666;
@@ -500,8 +499,7 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none;
-    text-transform: lowercase;
-    margin: 0 10px; }
+    text-transform: lowercase; }
 
 .sub-menu {
   flex-direction: column;

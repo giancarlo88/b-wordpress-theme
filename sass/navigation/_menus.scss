@@ -4,7 +4,7 @@
 	float: left;
 	width: 100%;
   background-color: $color__background-nav;
-  box-shadow: 1px 3px 5px 2px grey;
+  // box-shadow: 1px 3px 5px 2px grey;
   z-index: 60;
   position: relative;
 
@@ -36,6 +36,7 @@
 			a {
 				width: 200px;
         text-transform: lowercase;
+        margin: 5px 10px;
 			}
 
 			:hover > a,
@@ -69,7 +70,8 @@
 	a {
 		display: block;
 		text-decoration: none;
-    text-transform: lowercase
+    text-transform: lowercase;
+    margin: 0 10px;
 	}
 
 	.current_page_item > a,

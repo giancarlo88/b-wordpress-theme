@@ -17,6 +17,13 @@ get_header(); ?>
     'post_mime_type' => 'image',
     'post_status'    => 'inherit',
     'posts_per_page' =>  10,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'category_media',
+            'field'    => 'slug',
+            'terms'    => 'slideshow',
+        )
+    )
   );
   
   $query_images = new WP_Query( $query_images_args );

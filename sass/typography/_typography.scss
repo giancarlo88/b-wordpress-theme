@@ -11,6 +11,11 @@ textarea {
 
 @import url(https://fonts.googleapis.com/css?family=Sahitya);
 
+@font-face {
+  src: url(./fonts/news_gothic.ttf); 
+  font-family: "news-gothic"
+}
+
 @import "headings";
 
 @import "copy";
